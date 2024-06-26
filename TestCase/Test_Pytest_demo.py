@@ -1,6 +1,9 @@
 import requests
 from xToolkit import xfile
 import pytest
+import sys,os
+mypath =os.path.dirname(os.path.dirname(os.path.abspath(__file__))) #写入项目路径
+sys.path.append(mypath)
 
 list_data = xfile.read('demo_data.xls').excel_to_dict(sheet=0)
 
